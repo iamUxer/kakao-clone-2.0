@@ -2,8 +2,12 @@
 @import "reset.css";
 @import "status-bar.css";
 @import "header.css";
+<<<<<<< HEAD
 @import "nav.css";
 @import "friend.css";
+=======
+@import "nav-bar.css";
+>>>>>>> 5242f6a113b70ce234bb39a22b3126534c4d61f4
 
 * {
   box-sizing: border-box;
