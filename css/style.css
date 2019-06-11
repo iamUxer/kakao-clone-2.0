@@ -1,27 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
-@import "reset.css";
-@import "status-bar.css";
-@import "header.css";
-<<<<<<< HEAD
-@import "nav.css";
-@import "friend.css";
-=======
-@import "nav-bar.css";
->>>>>>> 5242f6a113b70ce234bb39a22b3126534c4d61f4
-
+@import url(reset.css);
+@import url(status-bar.css);
+@import url(header.css);
+@import url(nav-bar.css);
+@import url(friend.css);
+@import url(nav-bar.css);
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   background-color: white;
   padding: 10px 20px;
   color: #020202;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 a {
   color: inherit;
-  text-decoration: none;
-}
+  text-decoration: none; }
+
+@keyframes down-to-up {
+  from {
+    transform: translateY(100px);
+    opacity: 0; }
+  to {
+    transform: none;
+    opacity: 1; } }
+
+main {
+  animation: down-to-up 0.3s ease-out; }

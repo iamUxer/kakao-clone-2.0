@@ -42,3 +42,18 @@
 .friend__content .friend__bottom-text {
   font-size: 14px;
 }
+
+@keyframes rotateAvatar {
+  from {
+    transform: none;
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(1turn);
+    opacity: 1;
+  }
+}
+
+.friend__avatar {
+  animation: rotateAvatar 0.3s linear;
+}
