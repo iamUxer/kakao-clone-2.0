@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1024, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="fetch" onclick="fetch__response('html')" />
+    <input type="button" value="css" onclick="fetch__response('css')" />
+    <input
+      type="button"
+      value="javascript"
+      onclick="fetch__response('javascript')"
+    />
+    <article></article>
+  </body>
+  <script>
+    function fetch__response(link__name) {
+      fetch(link__name).then(function(response__data) {
+        response__data.text().then(function(text) {
+          document.querySelector("article").innerHTML = text;
+          console.log(response__data.status);
+        });
+      });
+    }
+  </script>
+</html>

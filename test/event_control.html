@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>event-control</title>
+  </head>
+  <body>
+    <form id="frm">
+      <fieldset>
+        <legend>주소록</legend>
+        <textarea id="txt" cols="60" rows="10"></textarea><br />
+        <input type="submit" id="q" value="불러오기" />
+      </fieldset>
+    </form>
+  </body>
+  <script>
+    const address = ["구유리", "email: yulrhymz@gmail.com"];
+
+    const q = document.getElementById("frm");
+
+    function addr_search(event) {
+      event.preventDefault();
+      const textarea = q.txt;
+
+      textarea.value = "이름 / 주소 \n";
+      textarea.value += address[0] + "/ " + address[1] + "\n";
+    }
+
+    q.addEventListener("submit", addr_search); //콜백 방식
+  </script>
+</html>
